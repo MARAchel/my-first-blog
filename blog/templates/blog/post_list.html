@@ -7,7 +7,15 @@
 			<h3><a href="/">Cello Concerto</a></h3>
 		</div>
 
-		<div>
+		{% for post in posts %}
+		   <div>
+			   <p>published:{{ post.published_date }}</p>
+			   <h4><a href="">{{ post.title }}</a></h4>
+			   <p>{{ post.text|linebreaksbr }}</p>
+		   </div>
+		{% endfor %}
+
+		<!--<div>
 			<p>published: </p>
 			<h4><a href="">Movement I</a></h4>
 			<p></p>
@@ -17,6 +25,6 @@
 			<p>published: </p>
 			<h4><a href="">Movement II</a></h4>
 			<p></p>
-		</div>
+		</div>-->
 	</body>
 </html>
